@@ -82,7 +82,7 @@ const ChatContainer = () => {
 
   return (
     <div className="container">
-      <p>key is: {env.OPENAI_API_KEY}</p>
+      
       <div className="chat">
         {chats.map((chat, i) =>
           chat.isFeedBack ? (
