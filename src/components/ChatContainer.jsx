@@ -2,10 +2,10 @@ import { Configuration, OpenAIApi } from "openai";
 import { useRef, useState } from "react";
 import Chat from "./Chat";
 import FeedBack from "./FeedBack";
-
+import env from 'react-dotenv';
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -82,7 +82,7 @@ const ChatContainer = () => {
 
   return (
     <div className="container">
-      <p>key is: {process.env.OPENAI_API_KEY}</p>
+      <p>key is: {env.OPENAI_API_KEY}</p>
       <div className="chat">
         {chats.map((chat, i) =>
           chat.isFeedBack ? (
