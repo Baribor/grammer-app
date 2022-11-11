@@ -4,7 +4,7 @@ import Chat from "./Chat";
 import FeedBack from "./FeedBack";
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
