@@ -1,6 +1,8 @@
+import "./App.css";
+import ChatContainer from "./components/ChatContainer";
 
-const App = ()=>{
-   return <h1>Hello world</h1>
-}
+const App = () => {
+  return <ChatContainer />;
+};
 
 export default App;
