@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import Chat from "./Chat";
 import FeedBack from "./FeedBack";
 
+
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -14,6 +15,8 @@ const ChatContainer = () => {
     { isBot: true, text: "Hi, how are you doing?", isFeedBack: false },
   ]);
   const history = ["AI: Hi, how are you doing?"];
+  
+  
 
   const handleSend = async () => {
     let s = textRef.current.value;
@@ -79,6 +82,7 @@ const ChatContainer = () => {
 
   return (
     <div className="container">
+      <p>key is: {process.env.OPENAI_API_KEY}</p>
       <div className="chat">
         {chats.map((chat, i) =>
           chat.isFeedBack ? (
